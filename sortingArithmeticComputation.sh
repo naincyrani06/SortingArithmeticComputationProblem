@@ -44,8 +44,9 @@ do
 		fi
 	done
 done
-echo "Sorted Array in Descending Order: "
-for((i=0;i<4;i++))
+echo "Sorted Array in Ascending Order is : "
+
+for((i=3;i>=0;i--))
 do
-	echo ${valueIntoArray[$i]}
+        echo ${valueIntoArray[$i]}
 done
