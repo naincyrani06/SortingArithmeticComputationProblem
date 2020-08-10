@@ -1,7 +1,7 @@
 #!/bin/bash -x
 echo "Welcome to Arithmetic Computation and Sorting"
 declare -A expressionResultStore
-
+declare-a valueIntoArray
 read -p "Enter the value of a: " a
 read -p "Enter the value of b: " b
 read -p "Enter the value of c: " c
@@ -24,3 +24,10 @@ do
 	echo "$i:${expressionResultStore[$i]}"
 done
 
+for i in "${expressionResultStore[@]}"
+do
+	valueIntoArray[((counter++))]=$i
+done
+
+
+echo "Generated Array is : "${valueIntoArray[@]}
