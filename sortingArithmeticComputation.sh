@@ -31,3 +31,21 @@ done
 
 
 echo "Generated Array is : "${valueIntoArray[@]}
+
+for((i=0;i<4;i++))
+do
+	for((j=$i+1;j<4;j++))
+	do
+		if [ ${valueIntoArray[i]} -lt ${valueIntoArray[j]} ]
+		then
+			temp=${valueIntoArray[i]}
+			valueIntoArray[i]=${valueIntoArray[j]}
+			valueIntoArray[j]=$temp
+		fi
+	done
+done
+echo "Sorted Array in Descending Order: "
+for((i=0;i<4;i++))
+do
+	echo ${valueIntoArray[$i]}
+done
